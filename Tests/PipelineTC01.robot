@@ -8,7 +8,8 @@ Test Setup       Open the Browser
 Test Teardown    Close the Browser 
 
 *** Test Cases ***
-User is creating a pipeline between Salesforce and Snowflake    
+User is creating a pipeline between Salesforce and Snowflake  
+    [Tags]  salesforce
     Given User is alowed to login to Hevo
     When User is selecting Salesforce as source
     And User is selecting a Salesforce account
@@ -16,6 +17,7 @@ User is creating a pipeline between Salesforce and Snowflake
     And User selects snowflake as destination
 
 User is naviagting to destination and verifying the load
+    [Tags]  sanity
     Given User is alowed to login to Hevo
     Given User is navigating to destination
     When User navigates to workbench section of a destination
